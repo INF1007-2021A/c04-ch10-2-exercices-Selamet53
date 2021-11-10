@@ -13,7 +13,10 @@ def lire_fichier():
 
 def trouver_attribut_cible():
     df = lire_fichier()
-    return df["quality"]
+    return df["quality"], df[df.columns.difference(["quality"])]
+
+
+#def ...
 
 
 if __name__ == '__main__':
